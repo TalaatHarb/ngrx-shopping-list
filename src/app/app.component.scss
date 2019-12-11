@@ -1,0 +1,45 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+#wrapper {
+    background: greenyellow;
+    padding: 5px;
+    border: solid 1px green;
+    text-align: center;
+}
+
+.list-title {
+    background: green;
+    padding: 5px;
+    color: whitesmoke;
+}
+
+.list-item {
+    padding: 5px;
+}
+
+ul {
+    list-style-type: none;
+}
+
+.add-group {
+    padding: 5px;
+}
+
+#list {
+    background: yellowgreen;
+}
+
+.delete-btn {
+    background: red;
+    margin-left: 5px;
+    padding: 3px;
+}
+
+.add-btn {
+    background: blue;
+    margin-left: 5px;
+    padding: 3px;
+}
