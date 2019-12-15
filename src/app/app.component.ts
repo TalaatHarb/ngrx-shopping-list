@@ -5,6 +5,8 @@ import { Observable } from 'rxjs';
 import { ShoppingItem } from './store/models/shopping-item.model';
 import { AddItemAction, DeleteItemAction } from './store/actions/shopping.actions';
 
+import {v4} from 'node_modules/uuid';
+
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -26,8 +28,8 @@ export class AppComponent implements OnInit {
 
   addItem() {
     if (this.newShoppingItem.name.length > 0) {
-      this.newShoppingItem.id = Math.random() + '';
-
+      this.newShoppingItem.id = v4();
+      console.log(this.newShoppingItem);
       this.store.dispatch(new AddItemAction(this.newShoppingItem));
 
       this.newShoppingItem = { id: '', name: '' };

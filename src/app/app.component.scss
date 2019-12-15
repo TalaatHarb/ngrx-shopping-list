@@ -24,22 +24,12 @@ ul {
     list-style-type: none;
 }
 
-.add-group {
-    padding: 5px;
-}
-
 #list {
     background: yellowgreen;
 }
 
-.delete-btn {
-    background: red;
-    margin-left: 5px;
-    padding: 3px;
-}
-
-.add-btn {
-    background: blue;
-    margin-left: 5px;
-    padding: 3px;
+.form-centered{
+    align-items: center;
+    display: flex;
+    justify-content: center;
 }

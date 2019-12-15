@@ -3,13 +3,16 @@
     <div id="list">
       <h2 class="list-title">Shopping List</h2>
       <ul>
-        <li class="list-item" *ngFor="let shopping of shoppingItems | async">
-          {{shopping.name}} <button class="delete-btn" (click)="deleteItem(shopping.id)">x</button><br>-----------------------------------------
+        <li class="list-item" *ngFor="let item of shoppingItems | async">
+          {{item.name}} <button class="btn btn-danger ml-2 pb-1"
+            (click)="deleteItem(item.id)">x</button><br>-----------------------------------------
         </li>
       </ul>
-      <div class="add-group">
-        <input [(ngModel)]="newShoppingItem.name" (keyup.enter)="addItem()"><button class="add-btn" [disabled]="newShoppingItem.name.length < 1"
-          (click)="addItem()">+</button>
+      <div class="form-centered pb-3 pt-3">
+        <div class="form-inline">
+          <input class="form-control" [(ngModel)]="newShoppingItem.name" (keyup.enter)="addItem()"><button
+            class="form-control btn btn-primary ml-2 pb-1" [disabled]="newShoppingItem.name.length < 1" (click)="addItem()">+</button>
+        </div>
       </div>
     </div>
   </div>
